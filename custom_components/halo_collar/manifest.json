@@ -1,9 +1,10 @@
 {
   "domain": "halo_collar",
   "name": "Halo Collar",
-  "codeowners": [],
+  "codeowners": ["@KyleTeal"],
   "config_flow": true,
   "documentation": "https://github.com/KyleTeal/ha-halo-collar",
+  "issue_tracker": "https://github.com/KyleTeal/ha-halo-collar/issues",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
   "requirements": [],
