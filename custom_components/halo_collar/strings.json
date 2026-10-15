@@ -1,0 +1,110 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Halo Collar",
+        "description": "Sign in with the email and password for your Halo account. The password is sent to Halo to get a login and is not stored.",
+        "data": {
+          "email": "Email",
+          "password": "Password"
+        },
+        "data_description": {
+          "email": "The email address on your Halo account.",
+          "password": "Used once to sign in. Home Assistant keeps the refresh token."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Reconnect Halo Collar",
+        "description": "The Halo login for {email} expired. Enter the password again.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Halo rejected the email or password.",
+      "cannot_connect": "Could not reach Halo. Check the network and try again.",
+      "unknown": "Something went wrong talking to Halo. Check the logs and try again."
+    },
+    "abort": {
+      "already_configured": "This Halo account is already configured.",
+      "reauth_successful": "Reconnected to Halo.",
+      "wrong_account": "That password belongs to a different Halo account."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Halo Collar options",
+        "data": {
+          "scan_interval": "Update interval",
+          "refresh_telemetry": "Ask the collar for fresh telemetry"
+        },
+        "data_description": {
+          "scan_interval": "How often to read location and collar state. Minimum 60 seconds.",
+          "refresh_telemetry": "Wakes the collar on each poll. Leave this off to use the last reported location."
+        }
+      }
+    }
+  },
+  "entity": {
+    "device_tracker": {
+      "location": {
+        "name": "Location"
+      }
+    },
+    "sensor": {
+      "battery": {
+        "name": "Battery"
+      },
+      "connection": {
+        "name": "Connection",
+        "state": {
+          "wifi": "Wi-Fi",
+          "cellular": "Cellular",
+          "offline": "Offline"
+        }
+      },
+      "geofence": {
+        "name": "Geofence"
+      },
+      "configuration_sync": {
+        "name": "Configuration sync"
+      },
+      "last_telemetry": {
+        "name": "Last telemetry"
+      },
+      "firmware_update_status": {
+        "name": "Firmware update status"
+      },
+      "recent_corrections": {
+        "name": "Recent corrections"
+      }
+    },
+    "binary_sensor": {
+      "online": {
+        "name": "Online"
+      },
+      "fences": {
+        "name": "Fences"
+      },
+      "beacons": {
+        "name": "Beacons"
+      },
+      "walk": {
+        "name": "Walk"
+      },
+      "fences_synchronized": {
+        "name": "Fences synchronized"
+      },
+      "firmware_update_available": {
+        "name": "Firmware update"
+      }
+    },
+    "update": {
+      "firmware": {
+        "name": "Firmware"
+      }
+    }
+  }
+}

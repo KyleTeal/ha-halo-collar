@@ -1,0 +1,43 @@
+{
+  "entity": {
+    "device_tracker": {
+      "location": {
+        "default": "mdi:dog"
+      }
+    },
+    "sensor": {
+      "connection": {
+        "default": "mdi:connection"
+      },
+      "geofence": {
+        "default": "mdi:fence"
+      },
+      "configuration_sync": {
+        "default": "mdi:sync"
+      },
+      "last_telemetry": {
+        "default": "mdi:clock-outline"
+      },
+      "firmware_update_status": {
+        "default": "mdi:chip"
+      },
+      "recent_corrections": {
+        "default": "mdi:alert-circle-outline"
+      }
+    },
+    "binary_sensor": {
+      "fences": {
+        "default": "mdi:fence"
+      },
+      "beacons": {
+        "default": "mdi:access-point"
+      },
+      "walk": {
+        "default": "mdi:walk"
+      },
+      "fences_synchronized": {
+        "default": "mdi:sync"
+      }
+    }
+  }
+}
